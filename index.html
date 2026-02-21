@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pl" data-lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POLONIA — Żywa Historia / Living History</title>
+  <meta name="description" content="Polish history, culture and traditions in 13 languages.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <div class="loader-emblem">⚜</div>
+  <div class="loader-text">POLONIA</div>
+  <div class="loader-sub" id="loaderSub">Żywa Historia</div>
+</div>
+
+<!-- LANGUAGE PANEL OVERLAY -->
+<div class="lang-panel-overlay" id="langOverlay"></div>
+<div class="lang-panel" id="langPanel">
+  <div class="lang-panel-inner">
+    <button class="lang-panel-close" id="langPanelClose">✕</button>
+    <div class="lang-panel-title">Select language · Wybierz język</div>
+    <div class="lang-grid" id="langGrid"></div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <span class="logo-eagle">⚜</span>
+      <div class="logo-text">
+        <span class="logo-main">POLONIA</span>
+        <span class="logo-sub" id="logoSub">Żywa Historia</span>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <a href="#map" class="nav-link" id="nav_map">Mapa</a>
+      <a href="#calendar" class="nav-link" id="nav_traditions">Tradycje</a>
+      <a href="#history" class="nav-link" id="nav_history">Historia</a>
+      <a href="#culture" class="nav-link" id="nav_culture">Kultura</a>
+      <a href="#about" class="nav-link" id="nav_about">O projekcie</a>
+    </nav>
+    <button class="lang-toggle" id="langToggle">
+      <span class="lang-toggle-flag" id="langFlag">🇵🇱</span>
+      <span class="lang-toggle-name" id="langName">Polski</span>
+      <span class="lang-toggle-arrow">▾</span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-red-block"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow" id="hero_eyebrow">Polska · Historia · Kultura · Tradycje</div>
+    <h1 class="hero-title">
+      <span class="hero-line-1" id="hero_line1">Tysiąc lat</span>
+      <span class="hero-line-2" id="hero_line2">żywej historii</span>
+    </h1>
+    <p class="hero-desc" id="hero_desc">Podróż przez wieki — od pierwszych Piastów do dziś. Mapy, tradycje, święta i losy narodu, który nigdy się nie poddał.</p>
+    <div class="hero-actions">
+      <a href="#map" class="btn-primary" id="btn_open_map">Otwórz mapę</a>
+      <a href="#calendar" class="btn-secondary" id="btn_year_circle">Rok tradycji</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><span id="scroll_down">przewijaj w dół</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat"><span class="stat-num">1050</span><span class="stat-label" id="stat_years">lat historii</span></div>
+  <div class="stat-div"></div>
+  <div class="stat"><span class="stat-num">48+</span><span class="stat-label" id="stat_events">kluczowych wydarzeń</span></div>
+  <div class="stat-div"></div>
+  <div class="stat"><span class="stat-num">12</span><span class="stat-label" id="stat_months">miesięcy tradycji</span></div>
+  <div class="stat-div"></div>
+  <div class="stat"><span class="stat-num">13</span><span class="stat-label" id="stat_langs">języków</span></div>
+</div>
+
+<!-- MAP -->
+<section class="section" id="map">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title-block">
+      <h2 id="sec1_title">Mapa historyczna</h2>
+      <p id="sec1_desc">Miejsca, wydarzenia i losy na interaktywnej mapie Polski</p>
+    </div>
+  </div>
+  <div class="map-controls">
+    <button class="map-filter active" data-filter="all" id="filter_all">Wszystkie epoki</button>
+    <button class="map-filter" data-filter="piast" id="filter_piast">Piastowie</button>
+    <button class="map-filter" data-filter="jagiello" id="filter_jagiello">Jagiellonowie</button>
+    <button class="map-filter" data-filter="rzecz" id="filter_rzecz">Rzeczpospolita</button>
+    <button class="map-filter" data-filter="modern" id="filter_modern">Czasy nowożytne</button>
+  </div>
+  <div class="map-wrapper">
+    <div id="main-map"></div>
+    <div class="map-legend">
+      <div class="legend-title" id="legend_title">Legenda</div>
+      <div class="legend-item"><span class="legend-dot battle"></span><span id="legend_battles">Bitwy</span></div>
+      <div class="legend-item"><span class="legend-dot capital"></span><span id="legend_capitals">Stolice</span></div>
+      <div class="legend-item"><span class="legend-dot culture"></span><span id="legend_culture_leg">Kultura</span></div>
+      <div class="legend-item"><span class="legend-dot tragedy"></span><span id="legend_tragedies">Tragedie</span></div>
+    </div>
+  </div>
+  <div class="event-panel" id="eventPanel">
+    <div class="event-panel-inner">
+      <button class="event-close" id="eventClose">✕</button>
+      <div class="event-year" id="eventYear"></div>
+      <h3 class="event-title" id="eventTitle"></h3>
+      <p class="event-desc" id="eventDesc"></p>
+      <div class="event-tags" id="eventTags"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CALENDAR -->
+<section class="section-dark-wrap" id="calendar">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">02</div>
+      <div class="section-title-block">
+        <h2 id="sec2_title">Roczny krąg tradycji</h2>
+        <p id="sec2_desc">Polski rok to nieprzerwany strumień świąt, obrzędów i żywych tradycji</p>
+      </div>
+    </div>
+    <div class="months-wheel">
+      <div class="months-nav" id="monthsNav"></div>
+      <div class="month-content" id="monthContent"></div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORY -->
+<section class="section" id="history">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title-block">
+      <h2 id="sec3_title">Kamienie milowe historii</h2>
+      <p id="sec3_desc">Od pierwszych Piastów do XXI wieku</p>
+    </div>
+  </div>
+  <div class="timeline" id="timeline"></div>
+</section>
+
+<!-- CULTURE -->
+<section class="section-dark-wrap" id="culture">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">04</div>
+      <div class="section-title-block">
+        <h2 id="sec4_title">Kultura i dusza</h2>
+        <p id="sec4_desc">To, co czyni Polskę Polską</p>
+      </div>
+    </div>
+    <div class="culture-grid">
+      <div class="culture-card"><div class="culture-icon">🎵</div><h3 id="cult_music_title">Muzyka</h3><p id="cult_music_desc">Chopin, mazurek, polka</p></div>
+      <div class="culture-card"><div class="culture-icon">🍲</div><h3 id="cult_food_title">Kuchnia</h3><p id="cult_food_desc">Bigos, pierogi, żurek</p></div>
+      <div class="culture-card"><div class="culture-icon">🎨</div><h3 id="cult_folk_title">Sztuka ludowa</h3><p id="cult_folk_desc">Wycinanki, malowidła, hafty</p></div>
+      <div class="culture-card"><div class="culture-icon">📖</div><h3 id="cult_lit_title">Literatura</h3><p id="cult_lit_desc">Mickiewicz, Sienkiewicz, Szymborska</p></div>
+      <div class="culture-card"><div class="culture-icon">💃</div><h3 id="cult_dance_title">Taniec</h3><p id="cult_dance_desc">Mazurek, krakowiak, polonez</p></div>
+      <div class="culture-card culture-card-wide"><div class="culture-icon">⚔️</div><h3 id="cult_char_title">Polski charakter</h3><p id="cult_char_desc">Gościnność, upór, romantyzm i poświęcenie.</p><p class="culture-motto"><em>Bóg, Honor, Ojczyzna</em></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section-about" id="about">
+  <div class="about-inner">
+    <div class="about-emblem">⚜</div>
+    <h2 id="about_title">O projekcie</h2>
+    <p id="about_desc">Polonia to otwarty, niekomercyjny projekt stworzony z miłości do polskiej historii i kultury.</p>
+    <div class="langs-all" id="langsAll"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">⚜ POLONIA</div>
+    <p id="footer_tagline">Otwarty projekt · Wolny dostęp · Bez reklam</p>
+    <div class="footer-copy">2025</div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="translations.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
