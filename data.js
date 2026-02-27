@@ -3,24 +3,6 @@
 // Исторические события, традиции, временная шкала
 // ============================================
 
-const LANG = {
-  current: 'ru',
-
-  t(key) {
-    const entry = TRANSLATIONS[key];
-    if (!entry) return key;
-    return entry[this.current] || entry['ru'] || key;
-  }
-};
-
-const TRANSLATIONS = {
-  'season.winter': { ru: 'Зима', pl: 'Zima' },
-  'season.spring': { ru: 'Весна', pl: 'Wiosna' },
-  'season.summer': { ru: 'Лето', pl: 'Lato' },
-  'season.autumn': { ru: 'Осень', pl: 'Jesień' },
-  'map.click': { ru: 'Нажмите на метку для подробностей', pl: 'Kliknij znacznik, aby zobaczyć szczegóły' },
-};
-
 // ============================================
 // ИСТОРИЧЕСКИЕ СОБЫТИЯ ДЛЯ КАРТЫ
 // ============================================
