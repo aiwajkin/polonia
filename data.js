@@ -163,6 +163,462 @@ const MAP_EVENTS = [
     },
     tags: ['modern', 'politics', 'freedom']
   },
+  {
+    id: 14, era: 'piast',
+    lat: 52.883, lng: 14.200,
+    type: 'battle',
+    year: 972,
+    title: { ru: 'Битва при Цедыне', pl: 'Bitwa pod Cedynią' },
+    desc: {
+      ru: 'Одно из первых документированных сражений польского войска. Победа Мешко I над маркграфом Годоным укрепляет западную границу молодого государства.',
+      pl: 'Jedna z pierwszych udokumentowanych bitew polskiego wojska. Zwycięstwo Mieszka I nad margrabią Hodonem umacnia zachodnią granicę młodego państwa.'
+    },
+    tags: ['piast', 'battle', 'border']
+  },
+  {
+    id: 15, era: 'piast',
+    lat: 51.937, lng: 15.505,
+    type: 'culture',
+    year: 1138,
+    title: { ru: 'Раздел Польши по завещанию Болеслава Кривоустого', pl: 'Testament Bolesława Krzywoustego' },
+    desc: {
+      ru: 'Князь делит страну между сыновьями, вводя систему удельных княжеств. Начинается период феодальной раздробленности.',
+      pl: 'Książę dzieli kraj między synów, wprowadzając system dzielnicowy. Rozpoczyna się okres rozbicia dzielnicowego.'
+    },
+    tags: ['piast', 'politics']
+  },
+  {
+    id: 16, era: 'piast',
+    lat: 50.289, lng: 18.677,
+    type: 'tragedy',
+    year: 1296,
+    title: { ru: 'Убийство короля Пшемысла II в Рогожно', pl: 'Zabójstwo króla Przemysła II w Rogoźnie' },
+    desc: {
+      ru: 'Король, попытавшийся восстановить единство Польши, гибнет от рук наёмных убийц. Страна снова погружается в анархию.',
+      pl: 'Król, który próbował zjednoczyć Polskę, ginie z rąk najemnych zabójców. Kraj ponownie pogrąża się w chaosie.'
+    },
+    tags: ['piast', 'tragedy', 'politics']
+  },
+  {
+    id: 17, era: 'piast',
+    lat: 52.401, lng: 16.920,
+    type: 'culture',
+    year: 1253,
+    title: { ru: 'Основание Познани как городского центра', pl: 'Lokacja Poznania na prawie magdeburskim' },
+    desc: {
+      ru: 'Познань получает городское право и становится одним из главных торговых центров Польши.',
+      pl: 'Poznań otrzymuje prawo miejskie i staje się jednym z głównych ośrodków handlowych Polski.'
+    },
+    tags: ['piast', 'city', 'trade']
+  },
+  {
+    id: 18, era: 'jagiello',
+    lat: 54.190, lng: 19.990,
+    type: 'battle',
+    year: 1457,
+    title: { ru: 'Покупка Мальборка и конец могущества ордена', pl: 'Wykupienie Malborka' },
+    desc: {
+      ru: 'Польский король выкупает Мальборк у наёмников Тевтонского ордена. Символический конец военного доминирования крестоносцев над Балтикой.',
+      pl: 'Król polski wykupuje Malbork od zaciężnych Zakonu Krzyżackiego. Symboliczny koniec militarnej dominacji Krzyżaków nad Bałtykiem.'
+    },
+    tags: ['jagiello', 'battle', 'politics']
+  },
+  {
+    id: 19, era: 'jagiello',
+    lat: 50.061, lng: 19.938,
+    type: 'culture',
+    year: 1505,
+    title: { ru: 'Конституция "Ничего о нас без нас"', pl: 'Konstytucja Nihil novi' },
+    desc: {
+      ru: 'Сейм в Радоме утверждает принцип, что король не может принимать законов без согласия шляхты. Польша становится "шляхетской демократией".',
+      pl: 'Sejm w Radomiu ustanawia zasadę, że król nie może stanowić prawa bez zgody szlachty. Polska staje się "demokracją szlachecką".'
+    },
+    tags: ['jagiello', 'politics', 'constitution']
+  },
+  {
+    id: 20, era: 'jagiello',
+    lat: 54.308, lng: 18.573,
+    type: 'culture',
+    year: 1477,
+    title: { ru: 'Первый печатник в Гданьске', pl: 'Pierwsza drukarnia w Gdańsku' },
+    desc: {
+      ru: 'В Польше распространяется книгопечатание. Гданьск становится важным центром гуманизма и Ренессанса.',
+      pl: 'W Polsce rozwija się drukarstwo. Gdańsk staje się ważnym ośrodkiem humanizmu i renesansu.'
+    },
+    tags: ['jagiello', 'culture', 'printing']
+  },
+  {
+    id: 21, era: 'rzecz',
+    lat: 51.250, lng: 22.568,
+    type: 'culture',
+    year: 1569,
+    title: { ru: 'Люблин — столица унии', pl: 'Lublin — miasto Unii Lubelskiej' },
+    desc: {
+      ru: 'В Люблине подписывается договор, создающий Речь Посполитую Обоих Народов — общую державу поляков и литовцев.',
+      pl: 'W Lublinie podpisano akt tworzący Rzeczpospolitą Obojga Narodów — wspólne państwo Polaków i Litwinów.'
+    },
+    tags: ['rzecz', 'politics', 'union']
+  },
+  {
+    id: 22, era: 'rzecz',
+    lat: 49.695, lng: 21.750,
+    type: 'culture',
+    year: 1581,
+    title: { ru: 'Любовь к свободе — шляхетские сеймики', pl: 'Sejmiki szlacheckie' },
+    desc: {
+      ru: 'Местные собрания шляхты принимают решения и выбирают послов на сейм. Польша становится одной из самых самоуправляемых стран Европы.',
+      pl: 'Lokalne zgromadzenia szlachty podejmują decyzje i wybierają posłów na sejm. Polska staje się jednym z najbardziej samorządnych krajów Europy.'
+    },
+    tags: ['rzecz', 'politics', 'society']
+  },
+  {
+    id: 23, era: 'rzecz',
+    lat: 50.041, lng: 21.999,
+    type: 'battle',
+    year: 1656,
+    title: { ru: 'Осада Ясной Гуры', pl: 'Oblężenie Jasnej Góry' },
+    desc: {
+      ru: 'Во время шведского Потопа монахи и шляхта обороняют монастырь Ясна Гура в Ченстохове. Успешная оборона становится символом сопротивления и религиозной веры.',
+      pl: 'Podczas potopu szwedzkiego zakonnicy i szlachta bronią klasztoru Jasna Góra w Częstochowie. Udana obrona staje się symbolem oporu i wiary.'
+    },
+    tags: ['rzecz', 'battle', 'religion']
+  },
+  {
+    id: 24, era: 'rzecz',
+    lat: 54.095, lng: 18.778,
+    type: 'battle',
+    year: 1627,
+    title: { ru: 'Морское сражение при Оливе', pl: 'Bitwa pod Oliwą' },
+    desc: {
+      ru: 'Польский флот одерживает редкую морскую победу над Швецией у берегов Гданьска. Фрегат "Święty Jerzy" становится легендой.',
+      pl: 'Polska flota odnosi rzadkie zwycięstwo morskie nad Szwecją u wybrzeży Gdańska. Fregata "Święty Jerzy" przechodzi do legendy.'
+    },
+    tags: ['rzecz', 'battle', 'navy']
+  },
+  {
+    id: 25, era: 'rzecz',
+    lat: 53.014, lng: 18.598,
+    type: 'culture',
+    year: 1772,
+    title: { ru: 'Первый раздел и утрата Поморья', pl: 'Pierwszy rozbiór i utrata Pomorza' },
+    desc: {
+      ru: 'Пруссия аннексирует значительную часть польского побережья. Связь с Балтикой серьёзно ослаблена.',
+      pl: 'Prusy anektują znaczną część polskiego wybrzeża. Połączenie z Bałtykiem zostaje poważnie osłabione.'
+    },
+    tags: ['rzecz', 'partitions', 'tragedy']
+  },
+  {
+    id: 26, era: 'modern',
+    lat: 50.871, lng: 20.631,
+    type: 'battle',
+    year: 1914,
+    title: { ru: 'Легионы Пилсудского в Хентыне', pl: 'Legiony Piłsudskiego pod Kielcami' },
+    desc: {
+      ru: 'Добровольческие польские легионы сражаются в составе австро-венгерской армии, мечтая о будущей независимости.',
+      pl: 'Ochotnicze Legiony Polskie walczą w składzie armii austro-węgierskiej, marząc o przyszłej niepodległości.'
+    },
+    tags: ['modern', 'battle', 'independence']
+  },
+  {
+    id: 27, era: 'modern',
+    lat: 52.407, lng: 16.931,
+    type: 'battle',
+    year: 1918,
+    title: { ru: 'Великопольское восстание', pl: 'Powstanie Wielkopolskie' },
+    desc: {
+      ru: 'Одно из немногих полностью успешных польских восстаний. Познань и Великопольша возвращаются в состав возрожденной Польши.',
+      pl: 'Jedno z nielicznych całkowicie zwycięskich powstań. Poznań i Wielkopolska wracają do odrodzonej Polski.'
+    },
+    tags: ['modern', 'battle', 'victory']
+  },
+  {
+    id: 28, era: 'modern',
+    lat: 53.123, lng: 18.008,
+    type: 'culture',
+    year: 1923,
+    title: { ru: 'Памятник Копернику и пряничная традиция', pl: 'Pomnik Kopernika i tradycja piernika toruńskiego' },
+    desc: {
+      ru: 'Торунь подчеркивает свою связь с Коперником и славится пряниками, ставшими сладким символом города.',
+      pl: 'Toruń podkreśla związek z Kopernikiem i słynie z pierników, które stają się słodkim symbolem miasta.'
+    },
+    tags: ['modern', 'culture', 'city']
+  },
+  {
+    id: 29, era: 'modern',
+    lat: 49.300, lng: 19.950,
+    type: 'culture',
+    year: 1935,
+    title: { ru: 'Закопане — столица Подгалья', pl: 'Zakopane — stolica Podhala' },
+    desc: {
+      ru: 'Горный курорт под Татрами становится "зимней столицей Польши" и центром горянской культуры и архитектуры.',
+      pl: 'Kurort pod Tatrami staje się "zimową stolicą Polski" oraz ośrodkiem kultury i architektury podhalańskiej.'
+    },
+    tags: ['modern', 'culture', 'region']
+  },
+  {
+    id: 30, era: 'modern',
+    lat: 51.246, lng: 22.568,
+    type: 'tragedy',
+    year: 1940,
+    title: { ru: 'Люблинский концлагерь Майданек', pl: 'Obóz koncentracyjny Majdanek' },
+    desc: {
+      ru: 'Один из нацистских лагерей смерти на территории Польши. Сегодня — государственный музей и место памяти жертв Холокоста.',
+      pl: 'Jeden z nazistowskich obozów zagłady na ziemiach polskich. Dziś państwowe muzeum i miejsce pamięci ofiar Holokaustu.'
+    },
+    tags: ['modern', 'tragedy', 'ww2']
+  },
+  {
+    id: 31, era: 'modern',
+    lat: 50.052, lng: 19.178,
+    type: 'tragedy',
+    year: 1940,
+    title: { ru: 'Концлагерь Аушвиц-Биркенау', pl: 'KL Auschwitz-Birkenau' },
+    desc: {
+      ru: 'Крупнейший лагерь смерти Третьего рейха. Символ Холокоста и преступлений нацизма, включён в список наследия ЮНЕСКО.',
+      pl: 'Największy niemiecki obóz zagłady. Symbol Holokaustu i zbrodni nazizmu, wpisany na listę dziedzictwa UNESCO.'
+    },
+    tags: ['modern', 'tragedy', 'ww2']
+  },
+  {
+    id: 32, era: 'modern',
+    lat: 51.774, lng: 19.466,
+    type: 'culture',
+    year: 1945,
+    title: { ru: 'Послевоенная реконструкция Лодзи', pl: 'Powojenna Łódź — miasto przemysłu i filmu' },
+    desc: {
+      ru: 'Лодзь превращается в центр текстильной промышленности и польской кинематографии с известной киношколой.',
+      pl: 'Łódź staje się centrum przemysłu włókienniczego i polskiej kinematografii z słynną szkołą filmową.'
+    },
+    tags: ['modern', 'culture', 'industry']
+  },
+  {
+    id: 33, era: 'modern',
+    lat: 54.441, lng: 18.568,
+    type: 'culture',
+    year: 1945,
+    title: { ru: 'Рождение Гдыни и Труймясто', pl: 'Gdynia i Trójmiasto — okno na świat' },
+    desc: {
+      ru: 'Молодой портовый город Гдыня вместе с Гданьском и Сопотом образует агломерацию Труймясто — новое "окно Польши на мир".',
+      pl: 'Młode miasto portowe Gdynia wraz z Gdańskiem i Sopotem tworzy aglomerację Trójmiasto — nowe "okno Polski na świat".'
+    },
+    tags: ['modern', 'city', 'port']
+  },
+  {
+    id: 34, era: 'modern',
+    lat: 50.061, lng: 19.936,
+    type: 'culture',
+    year: 1978,
+    title: { ru: 'Кароль Войтыла становится Папой Римским', pl: 'Karol Wojtyła zostaje papieżem' },
+    desc: {
+      ru: 'Краковский архиепископ избран Папой Иоанном Павлом II. Первым папой-славянином в истории.',
+      pl: 'Krakowski arcybiskup zostaje wybrany na papieża Jana Pawła II. Pierwszego papieża-Słowianina w historii.'
+    },
+    tags: ['modern', 'religion', 'culture']
+  },
+  {
+    id: 35, era: 'modern',
+    lat: 52.250, lng: 20.995,
+    type: 'tragedy',
+    year: 1981,
+    title: { ru: 'Введение военного положения', pl: 'Wprowadzenie stanu wojennego' },
+    desc: {
+      ru: 'Генерал Ярузельский вводит военное положение, чтобы подавить "Солидарность". Тысячи интернированных, комендантский час, танки на улицах.',
+      pl: 'Generał Jaruzelski wprowadza stan wojenny, by zdławić "Solidarność". Tysiące internowanych, godzina milicyjna, czołgi na ulicach.'
+    },
+    tags: ['modern', 'tragedy', 'politics']
+  },
+  {
+    id: 36, era: 'modern',
+    lat: 51.125, lng: 17.028,
+    type: 'culture',
+    year: 1997,
+    title: { ru: 'Вроцлав — европейский город мостов', pl: 'Wrocław — europejskie miasto mostów' },
+    desc: {
+      ru: 'Город на Одере после послевоенной реконструкции становится одним из самых красивых и динамично развивающихся городов Польши.',
+      pl: 'Miasto nad Odrą po powojennej odbudowie staje się jednym z najpiękniejszych i najszybciej rozwijających się miast Polski.'
+    },
+    tags: ['modern', 'city', 'culture']
+  },
+  {
+    id: 37, era: 'modern',
+    lat: 52.229, lng: 21.012,
+    type: 'culture',
+    year: 2000,
+    title: { ru: 'Старый город Варшавы после восстановления', pl: 'Odbudowane Stare Miasto w Warszawie' },
+    desc: {
+      ru: 'Исторический центр, воссозданный после войны "кирпич к кирпичу", включён в список ЮНЕСКО как пример идеальной реконструкции.',
+      pl: 'Historyczne centrum odbudowane po wojnie "cegła po cegle" wpisano na listę UNESCO jako przykład wzorcowej rekonstrukcji.'
+    },
+    tags: ['modern', 'city', 'unesco']
+  },
+  {
+    id: 38, era: 'modern',
+    lat: 54.518, lng: 18.530,
+    type: 'culture',
+    year: 2014,
+    title: { ru: 'Музей Второй мировой войны в Гданьске', pl: 'Muzeum II Wojny Światowej w Gdańsku' },
+    desc: {
+      ru: 'Один из самых современных музеев Европы, рассказывающий о трагедии войны с польской и мировой перспективы.',
+      pl: 'Jeden z najnowocześniejszych muzeów w Europie, opowiadający o tragedii wojny z perspektywy polskiej i światowej.'
+    },
+    tags: ['modern', 'museum', 'ww2']
+  },
+  {
+    id: 39, era: 'modern',
+    lat: 53.013, lng: 23.152,
+    type: 'culture',
+    year: 2016,
+    title: { ru: 'Беловежская пуща — спор о первозданном лесу', pl: 'Puszcza Białowieska — spór o prastary las' },
+    desc: {
+      ru: 'Защищённый лес на границе с Беларусью становится символом борьбы за охрану природы и разумную вырубку.',
+      pl: 'Chroniony las na granicy z Białorusią staje się symbolem sporu o ochronę przyrody i racjonalną gospodarkę leśną.'
+    },
+    tags: ['modern', 'nature', 'unesco']
+  },
+  {
+    id: 40, era: 'modern',
+    lat: 50.064, lng: 19.945,
+    type: 'culture',
+    year: 2000,
+    title: { ru: 'Краков — европейская столица культуры', pl: 'Kraków — Europejska Stolica Kultury' },
+    desc: {
+      ru: 'Краков получает титул Европейской столицы культуры, подчёркивая роль города как культурного сердца Польши.',
+      pl: 'Kraków otrzymuje tytuł Europejskiej Stolicy Kultury, podkreślając rolę miasta jako kulturalnego serca Polski.'
+    },
+    tags: ['modern', 'culture', 'city']
+  },
+  {
+    id: 41, era: 'modern',
+    lat: 52.406, lng: 16.931,
+    type: 'culture',
+    year: 1956,
+    title: { ru: 'Познаньский июнь', pl: 'Poznański Czerwiec 1956' },
+    desc: {
+      ru: 'Первый массовый рабочий протест против коммунистической власти. Пролитая кровь становится предвестником будущих перемен.',
+      pl: 'Pierwszy masowy robotniczy protest przeciw władzy komunistycznej. Przelana krew zapowiada przyszłe zmiany.'
+    },
+    tags: ['modern', 'protest', 'politics']
+  },
+  {
+    id: 42, era: 'modern',
+    lat: 52.229, lng: 21.012,
+    type: 'culture',
+    year: 2012,
+    title: { ru: 'Евро-2012 в Польше', pl: 'EURO 2012 w Polsce' },
+    desc: {
+      ru: 'Совместный с Украиной чемпионат Европы по футболу приносит Польше новые стадионы и инфраструктуру в Варшаве, Гданьске, Вроцлаве и Познани.',
+      pl: 'Wspólnie z Ukrainą Polska organizuje Mistrzostwa Europy w piłce nożnej, z nowymi stadionami i infrastrukturą w Warszawie, Gdańsku, Wrocławiu i Poznaniu.'
+    },
+    tags: ['modern', 'sport', 'infrastructure']
+  },
+  {
+    id: 43, era: 'modern',
+    lat: 50.870, lng: 20.627,
+    type: 'culture',
+    year: 2015,
+    title: { ru: 'Святой Крест и древний монастырь', pl: 'Święty Krzyż w Górach Świętokrzyskich' },
+    desc: {
+      ru: 'Один из старейших монастырей Польши на Свентокшиских горах — место паломничества и легенд о рогах сатаны.',
+      pl: 'Jeden z najstarszych klasztorów w Polsce w Górach Świętokrzyskich — miejsce pielgrzymek i legend o rogach diabła.'
+    },
+    tags: ['modern', 'religion', 'region']
+  },
+  {
+    id: 44, era: 'modern',
+    lat: 54.127, lng: 15.004,
+    type: 'nature',
+    year: 1970,
+    title: { ru: 'Словинский национальный парк', pl: 'Słowiński Park Narodowy' },
+    desc: {
+      ru: 'Подвижные дюны и озёра Балтики образуют уникальный пейзаж "польской Сахары".',
+      pl: 'Ruchome wydmy i jeziora Bałtyku tworzą unikalny krajobraz "polskiej Sahary".'
+    },
+    tags: ['modern', 'nature', 'baltic']
+  },
+  {
+    id: 45, era: 'modern',
+    lat: 50.267, lng: 19.023,
+    type: 'industry',
+    year: 1970,
+    title: { ru: 'Силезский угольный бассейн', pl: 'Górny Śląsk — region górniczy' },
+    desc: {
+      ru: 'Шахтёрский край Верхней Силезии десятилетиями обеспечивает Польшу углём и тяжёлой промышленностью.',
+      pl: 'Region Górnego Śląska przez dziesięciolecia dostarcza Polsce węgla i mocy przemysłowej.'
+    },
+    tags: ['modern', 'industry', 'region']
+  },
+  {
+    id: 46, era: 'modern',
+    lat: 54.518, lng: 18.530,
+    type: 'battle',
+    year: 1939,
+    title: { ru: 'Оборона Вестерплатте', pl: 'Obrona Westerplatte' },
+    desc: {
+      ru: 'Маленький польский гарнизон семь дней сдерживает немецкое наступление у входа в порт Гданьска. Символ начала войны и мужества.',
+      pl: 'Niewielki garnizon polski przez siedem dni powstrzymuje niemieckie natarcie u wejścia do portu w Gdańsku. Symbol początku wojny i odwagi.'
+    },
+    tags: ['modern', 'battle', 'ww2']
+  },
+  {
+    id: 47, era: 'modern',
+    lat: 52.406, lng: 16.921,
+    type: 'culture',
+    year: 2003,
+    title: { ru: 'Познаньский ярмарочный центр', pl: 'Międzynarodowe Targi Poznańskie' },
+    desc: {
+      ru: 'Один из крупнейших выставочных комплексов Центральной Европы, показывающий экономическую динамику региона.',
+      pl: 'Jeden z największych kompleksów targowych w Europie Środkowej, świadczący o gospodarczym potencjale regionu.'
+    },
+    tags: ['modern', 'trade', 'city']
+  },
+  {
+    id: 48, era: 'modern',
+    lat: 49.822, lng: 19.046,
+    type: 'culture',
+    year: 1963,
+    title: { ru: 'Фестиваль польской песни в Ополе', pl: 'Festiwal Polskiej Piosenki w Opolu' },
+    desc: {
+      ru: 'Музыкальный фестиваль в Ополе становится главным местом, где рождаются хиты польской эстрады.',
+      pl: 'Festiwal w Opolu staje się główną sceną, na której rodzą się przeboje polskiej muzyki rozrywkowej.'
+    },
+    tags: ['modern', 'music', 'culture']
+  },
+  {
+    id: 49, era: 'modern',
+    lat: 53.778, lng: 20.480,
+    type: 'nature',
+    year: 1975,
+    title: { ru: 'Мазурские озёра — край тысячи озёр', pl: 'Mazury — kraina tysiąca jezior' },
+    desc: {
+      ru: 'Один из самых популярных туристических регионов Польши, рай для яхтсменов и любителей природы.',
+      pl: 'Jeden z najpopularniejszych regionów turystycznych Polski, raj dla żeglarzy i miłośników przyrody.'
+    },
+    tags: ['modern', 'nature', 'region']
+  },
+  {
+    id: 50, era: 'modern',
+    lat: 52.229, lng: 21.015,
+    type: 'culture',
+    year: 1956,
+    title: { ru: 'Фестиваль "Варшавская осень"', pl: 'Festiwal "Warszawska Jesień"' },
+    desc: {
+      ru: 'Международный фестиваль современной музыки в Варшаве открывает польскую сцену композиторов миру.',
+      pl: 'Międzynarodowy festiwal muzyki współczesnej w Warszawie otwiera polską scenę kompozytorską na świat.'
+    },
+    tags: ['modern', 'music', 'culture']
+  },
+  {
+    id: 51, era: 'modern',
+    lat: 50.873, lng: 20.627,
+    type: 'culture',
+    year: 2013,
+    title: { ru: 'Деревянные церкви Малой Польши', pl: 'Drewniane kościoły Małopolski' },
+    desc: {
+      ru: 'Уникальные деревянные храмы, занесённые в список ЮНЕСКО, показывают богатство местной архитектурной традиции.',
+      pl: 'Unikalne drewniane świątynie wpisane na listę UNESCO ukazują bogactwo lokalnej tradycji architektonicznej.'
+    },
+    tags: ['modern', 'unesco', 'architecture']
+  },
 ];
 
 // ============================================

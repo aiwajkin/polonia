@@ -124,7 +124,13 @@ document.addEventListener('DOMContentLoaded', () => {
     markers.forEach(m => m.remove()); markers = [];
     MAP_EVENTS.forEach(ev => {
       if (filter !== 'all' && ev.era !== filter) return;
-      const marker = L.marker([ev.lat, ev.lng], { icon: makeIcon(ev.type) });
+      // лёгкое "дрожание" координат, чтобы события в одном городе не слипались в одну точку
+      const jitterBase = 0.05;
+      const jLat = ((ev.id % 3) - 1) * jitterBase;            // -0.05, 0 или +0.05°
+      const jLng = ((ev.id % 5) - 2) * (jitterBase * 0.8);    // шаги по долготе
+      const markerLat = ev.lat + jLat;
+      const markerLng = ev.lng + jLng;
+      const marker = L.marker([markerLat, markerLng], { icon: makeIcon(ev.type) });
       marker.on('click', () => showEventPanel(ev));
       marker.addTo(map); markers.push(marker);
     });
